@@ -10,8 +10,57 @@
       </ul>
     </div>
   <% end %>
-
+  <div class="home_title">
+    <%= form.label :物件名 %>
+    <%= form.text_field :name %>
+  </div>
+  <div class="home_price">
+    <%= form.label :賃料%>
+    <%= form.text_field :price %>
+  </div>
+   <div class="home_address">
+    <%= form.label :住所 %>
+    <%= form.text_field :address %>
+  </div>
+   <div class="home_title">
+    <%= form.label :築年数 %>
+    <%= form.text_field :age %>
+  </div>
+   <div class="home_title">
+    <%= form.label :備考 %>
+    <%= form.text_area :mark %>
+  </div>
+  <br>
+  <br>
+  <br>
+  <h2>最寄駅１</h2>
+  <div class="home_field">
+    <%= form.label :路線名 %>
+    <%= form.text_field :route %>
+  </div>
+  <div class="home_field">
+    <%= form.label :駅名 %>
+    <%= form.text_field :station %>
+  </div>
+  <div class="home_field">
+    <%= form.label :徒歩分数 %>
+    <%= form.text_field :minonfoot %>
+  </div>
+  <h2>最寄駅2</h2>
+  <div class="home_field">
+    <%= form.label :路線名 %>
+    <%= form.text_field :route %>
+  </div>
+  <div class="home_field">
+    <%= form.label :駅名 %>
+    <%= form.text_field :station %>
+  </div>
+  <div class="home_field">
+    <%= form.label :徒歩分数 %>
+    <%= form.text_field :minonfoot %>
+  </div>
   <div class="actions">
+  
     <%= form.submit %>
   </div>
 <% end %>
