@@ -1,0 +1,2 @@
+class Nstation < ApplicationRecord
+end

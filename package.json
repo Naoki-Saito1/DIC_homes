@@ -10,6 +10,7 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "firebase": "^9.1.0",
     "webpack-dev-server": "^4.0.0"
   }
 }
