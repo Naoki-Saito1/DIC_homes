@@ -23,9 +23,12 @@ ActiveRecord::Schema.define(version: 2021_09_27_113603) do
   end
 
   create_table "nstations", force: :cascade do |t|
-    t.string "route"
-    t.string "station"
-    t.string "minonfoot"
+    t.string "first_route"
+    t.string "first_station"
+    t.string "first_minonfoot"
+    t.string "second_route"
+    t.string "second_station"
+    t.string "second_minonfoot"
     t.integer "home_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
