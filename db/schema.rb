@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_27_113603) do
+ActiveRecord::Schema.define(version: 2021_09_27_111125) do
 
   create_table "homes", force: :cascade do |t|
     t.string "name"
@@ -23,28 +23,14 @@ ActiveRecord::Schema.define(version: 2021_09_27_113603) do
   end
 
   create_table "nstations", force: :cascade do |t|
-    t.string "first_route"
-    t.string "first_station"
-    t.string "first_minonfoot"
-    t.string "second_route"
-    t.string "second_station"
-    t.string "second_minonfoot"
+    t.string "route"
+    t.string "station"
+    t.string "minonfoot"
     t.integer "home_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["home_id"], name: "index_nstations_on_home_id"
   end
 
-  create_table "stationhomes", force: :cascade do |t|
-    t.integer "home_id", null: false
-    t.integer "nstation_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["home_id"], name: "index_stationhomes_on_home_id"
-    t.index ["nstation_id"], name: "index_stationhomes_on_nstation_id"
-  end
-
   add_foreign_key "nstations", "homes"
-  add_foreign_key "stationhomes", "homes"
-  add_foreign_key "stationhomes", "nstations"
 end
