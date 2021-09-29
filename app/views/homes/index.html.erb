@@ -1,3 +1,4 @@
+<div>
 <p id="notice"><%= notice %></p>
 
 <h1>物件一覧</h1>
@@ -18,18 +19,18 @@
     <% @homes.each do |home| %>
       <tr>
         <td><%= home.name %></td>
-        <td><%= heme.price %></td>
+        <td><%= home.price %>億円</td>
         <td><%= home.address %></td>
         <td><%= home.age %></td>
-        <td><%= home.mark %></td>
+        <td><%= home.mark %>年</td>
         <td><%= link_to 'Show', home %></td>
         <td><%= link_to 'Edit', edit_home_path(home) %></td>
-        <td><%= link_to 'Destroy', home, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', home, method: :delete, data: { confirm: 'けすぞいいのか？' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
+</div>
 <br>
 
 <%= link_to 'New Home', new_home_path %>

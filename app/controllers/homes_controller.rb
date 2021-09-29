@@ -1,28 +1,29 @@
 class HomesController < ApplicationController
   before_action :set_home, only: %i[ show edit update destroy ]
-
   # GET /homes or /homes.json
   def index
     @homes = Home.all
   end
-
   # GET /homes/1 or /homes/1.json
   def show
+    # @nstations = @home.nstations
   end
 
   # GET /homes/new
   def new
     @home = Home.new
+    # 2.times { @home.nstations.build }
   end
 
   # GET /homes/1/edit
   def edit
+    # @home.nstations.build
   end
 
   # POST /homes or /homes.json
   def create
     @home = Home.new(home_params)
-
+    # @nstations = @home.Nstations.new(home_params)
     respond_to do |format|
       if @home.save
         format.html { redirect_to @home, notice: "Home was successfully created." }
@@ -61,9 +62,8 @@ class HomesController < ApplicationController
     def set_home
       @home = Home.find(params[:id])
     end
-
     # Only allow a list of trusted parameters through.
     def home_params
-      params.require(:home).permit(:name, :price, :address, :age, :mark, :first_route, :first_station, :first_minonfoot, :second_route, :second_station, :second_minonfoot )
+      params.require(:home).permit(:home_id, :name, :price, :address, :age, :mark)
     end
 end

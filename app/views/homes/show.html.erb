@@ -1,44 +1,30 @@
 <p id="notice"><%= notice %></p>
 
-<div class="home_show">
-   <p>物件名:</p>
+
+<p>
+  <strong>物件名:</strong>
   <%= @home.name %>
-</div>
-<div class="home_show">
-   <p>賃料:</p>
-  <%= @home.price %>
-</div>
-<div class="home_show">
-   <p>住所:</p>
+</p>
+
+<p>
+  <strong>賃料:</strong>
+  <%= @home.price %>万円
+</p>
+
+<p>
+  <strong>住所:</strong>
   <%= @home.address %>
-</div>
-<div class="home_show">
-   <p>築年数:</p>
-  <%= @home.age %>
-</div>
-<div class="home_show">
-   <p>備考:</p>
-  <%= @home.age %>
-</div>
-<h2>最寄駅1</h2>
-<div class="home_show">
-   <p>路線名<%= stationhome.nstation.route %></p>
-</div>
-<div class="home_show">
-   <p>駅名<%= stationhome.nstation.station %></p>
-</div>
-<div class="home_show">
-   <p>徒歩分数<%= stationhome.nstation.minonfoot %></p>
-</div>
-<h2>最寄駅2</h2>
-<div class="home_show">
-   <p>路線名<%= stationhome.nstation.route %></p>
-</div>
-<div class="home_show">
-   <p>駅名<%= stationhome.nstation.station %></p>
-</div>
-<div class="home_show">
-   <p>徒歩分数<%= stationhome.nstation.minonfoot %></p>
-</div>
+</p>
+
+<p>
+  <strong>築年数:</strong>
+  <%= @home.age %>年
+</p>
+
+<p>
+  <strong>備考:</strong>
+  <%= @home.mark %>
+</p>
+
 <%= link_to 'Edit', edit_home_path(@home) %> |
 <%= link_to 'Back', homes_path %>

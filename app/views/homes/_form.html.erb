@@ -9,7 +9,8 @@
         <% end %>
       </ul>
     </div>
-  <% end %>
+<% end %>
+
   <div class="home_title">
     <%= form.label :物件名 %>
     <%= form.text_field :name %>
@@ -30,37 +31,6 @@
     <%= form.label :備考 %>
     <%= form.text_area :mark %>
   </div>
-  <br>
-  <br>
-  <br>
-  <h2>最寄駅１</h2>
-  <div class="home_field">
-    <%= form.label :路線名 %>
-    <%= form.text_field :first_route %>
-  </div>
-  <div class="home_field">
-    <%= form.label :駅名 %>
-    <%= form.text_field :first_station %>
-  </div>
-  <div class="home_field">
-    <%= form.label :徒歩分数 %>
-    <%= form.text_field :first_minonfoot %>
-  </div>
-  <h2>最寄駅2</h2>
-  <div class="home_field">
-    <%= form.label :路線名 %>
-    <%= form.text_field :second_route %>
-  </div>
-  <div class="home_field">
-    <%= form.label :駅名 %>
-    <%= form.text_field :second_station %>
-  </div>
-  <div class="home_field">
-    <%= form.label :徒歩分数 %>
-    <%= form.text_field :second_minonfoot %>
-  </div>
-  <div class="actions">
-  
-    <%= form.submit %>
-  </div>
+     <%= form.submit %>
 <% end %>
+
