@@ -19,7 +19,7 @@ class HomesController < ApplicationController
 
   # GET /homes/1/edit
   def edit
-    # @home.nstations.build
+    @home.nstations.build
   end
 
   # POST /homes or /homes.json
