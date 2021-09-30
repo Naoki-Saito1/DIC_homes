@@ -21,11 +21,11 @@
         <td><%= home.name %></td>
         <td><%= home.price %>億円</td>
         <td><%= home.address %></td>
-        <td><%= home.age %></td>
-        <td><%= home.mark %>年</td>
+        <td><%= home.age %>年</td>
+        <td><%= home.mark %></td>
         <td><%= link_to '詳細', home %></td>
         <td><%= link_to '編集', edit_home_path(home) %></td>
-        <td><%= link_to '削除', home, method: :delete, data: { confirm: 'いいのか？' } %></td>
+        <td><%= link_to '削除', home, method: :delete, data: { confirm: '本当にいいですか？' } %></td>
       </tr>
     <% end %>
   </tbody>
