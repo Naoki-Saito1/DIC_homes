@@ -6,13 +6,15 @@ class HomesController < ApplicationController
   end
   # GET /homes/1 or /homes/1.json
   def show
-    # @nstations = @home.nstations
+    @nstation = @home.nstations
   end
 
   # GET /homes/new
   def new
     @home = Home.new
-    # 2.times { @home.nstations.build }
+    2.times do
+      @home.nstations.build
+    end 
   end
 
   # GET /homes/1/edit
@@ -23,7 +25,6 @@ class HomesController < ApplicationController
   # POST /homes or /homes.json
   def create
     @home = Home.new(home_params)
-    # @nstations = @home.Nstations.new(home_params)
     respond_to do |format|
       if @home.save
         format.html { redirect_to @home, notice: "Home was successfully created." }
@@ -64,6 +65,11 @@ class HomesController < ApplicationController
     end
     # Only allow a list of trusted parameters through.
     def home_params
-      params.require(:home).permit(:home_id, :name, :price, :address, :age, :mark)
+      params.require(:home).permit(
+        :name, :price, :address, :age, :mark,
+        nstations_attributes: [
+          :route,:station,:minonfoot,:id
+        ]
+      )
     end
 end

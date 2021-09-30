@@ -31,6 +31,21 @@
     <%= form.label :備考 %>
     <%= form.text_area :mark %>
   </div>
-     <%= form.submit %>
+
+  <%= form.fields_for :nstations do |i| %>
+  <div class="home_title">
+    <%= i.label :路線名 %>
+    <%= i.text_field :route%>
+  </div>
+  <div class="home_title">
+    <%= i.label :駅名 %>
+    <%= i.text_field :station %>
+  </div>
+  <div class="home_title">
+    <%= i.label :徒歩分数 %>
+    <%= i.text_field :minonfoot %>
+  </div>
+  <% end %>
+  <%= form.submit %>
 <% end %>
 

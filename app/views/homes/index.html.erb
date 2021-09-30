@@ -23,9 +23,9 @@
         <td><%= home.address %></td>
         <td><%= home.age %></td>
         <td><%= home.mark %>年</td>
-        <td><%= link_to 'Show', home %></td>
-        <td><%= link_to 'Edit', edit_home_path(home) %></td>
-        <td><%= link_to 'Destroy', home, method: :delete, data: { confirm: 'けすぞいいのか？' } %></td>
+        <td><%= link_to '詳細', home %></td>
+        <td><%= link_to '編集', edit_home_path(home) %></td>
+        <td><%= link_to '削除', home, method: :delete, data: { confirm: 'いいのか？' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -33,4 +33,4 @@
 </div>
 <br>
 
-<%= link_to 'New Home', new_home_path %>
+<%= link_to '新規物件追加', new_home_path %>

@@ -24,7 +24,24 @@
 <p>
   <strong>備考:</strong>
   <%= @home.mark %>
-</p>
 
-<%= link_to 'Edit', edit_home_path(@home) %> |
-<%= link_to 'Back', homes_path %>
+
+  <% @nstation.each do |i| %>
+  
+  <p>
+    <strong>路線名<strong>
+    <%= i.route %>
+  </p>
+
+  <p>
+    <strong>駅名<strong>
+    <%= i.station %>
+  </p>
+
+  <p>
+    <strong>徒歩分数<strong>
+    <%= i.minonfoot %>分
+  </p>
+<% end %>
+<%= link_to '編集', edit_home_path(@home) %> |
+<%= link_to '戻る', homes_path %>
