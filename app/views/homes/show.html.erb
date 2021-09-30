@@ -25,9 +25,9 @@
   <strong>備考:</strong>
   <%= @home.mark %>
 
-
+  <% n = 1 %>
   <% @nstation.each do |i| %>
-  
+  <h2>最寄駅 <%= n %> </h2>
   <p>
     <strong>路線名<strong>
     <%= i.route %>
@@ -42,6 +42,7 @@
     <strong>徒歩分数<strong>
     <%= i.minonfoot %>分
   </p>
+  <% n += 1 %>
 <% end %>
 <%= link_to '編集', edit_home_path(@home) %> |
 <%= link_to '戻る', homes_path %>

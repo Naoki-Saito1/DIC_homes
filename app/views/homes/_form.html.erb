@@ -17,7 +17,7 @@
   </div>
   <div class="home_price">
     <%= form.label :賃料%>
-    <%= form.text_field :price %>
+    <%= form.text_field :price %>円
   </div>
    <div class="home_address">
     <%= form.label :住所 %>
@@ -25,14 +25,15 @@
   </div>
    <div class="home_title">
     <%= form.label :築年数 %>
-    <%= form.text_field :age %>
+    <%= form.text_field :age %>年
   </div>
    <div class="home_title">
     <%= form.label :備考 %>
     <%= form.text_area :mark %>
   </div>
-
+   <% n = 1 %>
   <%= form.fields_for :nstations do |i| %>
+  <h2>最寄駅 <%= n %> </h2>
   <div class="home_title">
     <%= i.label :路線名 %>
     <%= i.text_field :route%>
@@ -43,9 +44,10 @@
   </div>
   <div class="home_title">
     <%= i.label :徒歩分数 %>
-    <%= i.text_field :minonfoot %>
+    <%= i.text_field :minonfoot %>分
   </div>
+  <% n += 1 %>
   <% end %>
-  <%= form.submit %>
+  <%= form.submit "登録" %>
 <% end %>
 
